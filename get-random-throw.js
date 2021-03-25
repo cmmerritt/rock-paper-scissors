@@ -2,11 +2,10 @@
 // Calc which range it falls into: rock, paper, scissors
 // Return result as string
 
-export function getRandomThrow() {
-    const randomNum = Math.random();
-    if (randomNum < (10 / 3)) {
+export function getRandomThrow(someNum) {
+    if (someNum < (10 / 3)) {
         return 'rock';
-    } else if (randomNum < (10 / 3) * 2) {
+    } else if (someNum < (10 / 3) * 2 && someNum > (10 / 3)) {
         return 'paper';
     } else {
         return 'scissors';

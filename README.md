@@ -26,9 +26,9 @@
         -play button
         -elements to display:
             -win, loss, or draw
-            -total wins, losses, or draws in current round
+            -total wins, losses, draws, games in current round
     -set initial state (let)
-        -total wins, losses, or draws in current round
+        -initial wins, losses, draws, total games in current round
     -use event handler to get checked radio button when "play" is clicked
             document.querySelector('input:checked')
 

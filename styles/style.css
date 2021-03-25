@@ -93,7 +93,16 @@ footer {
     box-shadow: var(--shadow);
 }
   
-  @keyframes pulse {
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+
+@keyframes pulse {
     20% {
       transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
     }
@@ -111,3 +120,6 @@ footer {
     }
 
   }
+
+
+  

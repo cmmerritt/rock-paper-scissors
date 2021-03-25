@@ -78,6 +78,10 @@ header img {
     height: var(--header-height);
 }
 
+input:checked {
+    box-shadow: 2px 2px 10px 2px magenta;
+}
+
 p {
     margin: var(--gutter);
 }

@@ -5,7 +5,6 @@ import { getRandomThrow } from './get-random-throw.js';
 import { didUserWin } from './did-user-win.js';
 
 const playButton = document.getElementById('play-button');
-const resetButton = document.getElementById('reset-button');
 
 const computerPickArea = document.getElementById('computer-pick');
 const resultArea = document.getElementById('result');
@@ -16,6 +15,11 @@ const totalArea = document.getElementById('total');
 
 
 // initialize state
+
+
+let wins = 0;
+let losses = 0;
+let draws = 0;
 
 let wins, losses, draws, total = 0;
 
@@ -28,6 +32,26 @@ playButton.addEventListener('click', () => {
     const userPick = userSelectedRadioButton.value;
 
     computerPickArea.textContent = computerPick;
+
+    const result = didUserWin(userPick, computerPick);
+    
+
+    if (result === 'win') {
+        wins++;
+        resultArea.textContent = 'You win!';
+    } else if (result === 'lose') {
+        losses++;
+        resultArea.textContent = 'You lose';
+    } else if (result === 'draw') {
+        draws++;
+        resultArea.textContent = 'It\'s a draw';
+    }
+
+    winsArea.textContent = wins;
+    drawsArea.textContent = draws;
+    lossesArea.textContent = losses;
+    totalArea.textContent = wins + draws + losses;
+});
     
     total++;
     totalArea.textContent = `${total}`;

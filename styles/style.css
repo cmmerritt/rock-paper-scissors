@@ -95,7 +95,7 @@ input:checked + img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;

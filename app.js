@@ -20,6 +20,7 @@ const totalArea = document.getElementById('total');
 let wins = 0;
 let losses = 0;
 let draws = 0;
+let total = wins + draws + losses;
 
 // set event listeners to update state and DOM
 
@@ -48,5 +49,5 @@ playButton.addEventListener('click', () => {
     winsArea.textContent = wins;
     drawsArea.textContent = draws;
     lossesArea.textContent = losses;
-    totalArea.textContent = wins + draws + losses;
+    totalArea.textContent = total;
 });

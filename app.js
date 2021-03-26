@@ -16,9 +16,12 @@ const totalArea = document.getElementById('total');
 
 // initialize state
 
+
 let wins = 0;
 let losses = 0;
 let draws = 0;
+
+let wins, losses, draws, total = 0;
 
 // set event listeners to update state and DOM
 
@@ -49,3 +52,25 @@ playButton.addEventListener('click', () => {
     lossesArea.textContent = losses;
     totalArea.textContent = wins + draws + losses;
 });
+    
+    total++;
+    totalArea.textContent = `${total}`;
+
+    const result = didUserWin(userPick, computerPick);
+    resultArea.textContent = `${result}`;
+
+    if (result === 'win') {
+        wins++;
+        winsArea.textContent = `${wins}`;
+    } else if (result === 'lose') {
+        losses++;
+        winsArea.textContent = `${losses}`;
+    } else if (result === 'draw') {
+        draws++;
+        drawsArea.textContent = `${draws}`;
+    }
+
+    //
+});
+
+

@@ -5,7 +5,6 @@ import { getRandomThrow } from './get-random-throw.js';
 import { didUserWin } from './did-user-win.js';
 
 const playButton = document.getElementById('play-button');
-const resetButton = document.getElementById('reset-button');
 
 const computerPickArea = document.getElementById('computer-pick');
 const resultArea = document.getElementById('result');

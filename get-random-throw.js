@@ -5,7 +5,7 @@
 export function getRandomThrow(someNum) {
     if (someNum < (10 / 3)) {
         return 'rock';
-    } else if (someNum < (10 / 3) * 2) {
+    } else if (someNum < (10 / 3) * 2 && someNum > (10 / 3)) {
         return 'paper';
     } else {
         return 'scissors';
